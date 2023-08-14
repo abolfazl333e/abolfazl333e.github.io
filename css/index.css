@@ -1,0 +1,438 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #b6b3b3;
+}
+
+header {
+    direction: rtl;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-sec {
+    max-width: 50%;
+    width: 100%;
+    height: auto !important;
+}
+
+.nav-logo {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 40%;
+    height: 100%;
+
+}
+
+nav ul li {
+    margin-right: 1rem;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-sec ul li:hover {
+    transform: scale(1.2);
+    font-weight: bolder !important;
+}
+
+nav ul li a {
+    text-decoration: none;
+    width: 100%;
+    /*color: #fff;*/
+    color: gold;
+}
+
+.main-header {
+    width: 90%;
+    margin: 20px auto;
+    background: whitesmoke;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.Arduino_logo , .Altium_logo , .Mysql_logo {
+    width: 60px;
+    height: 50px;
+    margin: 0 5px;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.About_me , .skills {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 70%;
+    padding: 30px 10px;
+    text-justify: initial;
+    /*background: black;*/
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.About_me  {
+    left: 30% !important;
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.me_p {
+    color: whitesmoke;
+    margin-bottom: 20px;
+    /*font-size: 20px;*/
+    font-weight: bolder;
+}
+
+.About_me_img {
+    width: 90%;
+    max-width: 70%;
+    height: 90%;
+}
+
+
+.About_me_text {
+    width: 100%;
+    max-width: 50%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    color: #807f7f;
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 60%;
+    padding: 20px;
+    color: #807f7f;
+    background: #a19f9f;
+    height: 330px;
+    margin-left: 30px ;
+}
+
+#sliderImage {
+    max-width: 100%;
+    width: 500px;
+    height: 100%;
+    margin: 0 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* CSS transition for image fade animation */
+}
+
+#prevBtn , #nextBtn {
+    position: absolute;
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    opacity: 30%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+
+#prevBtn:hover , #nextBtn:hover {
+    opacity: 100%;
+}
+
+.skills_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #efefd1;
+    padding: unset;
+    width: 100%;
+    max-width: 40%;
+}
+
+.skills_img {
+
+    width: 100%;
+    height: 100%;
+    max-width: 70%;
+    max-height: 80%;
+    margin: 0 auto;
+}
+
+.skills_h3 {
+    width: 100%;
+    height: 100%;
+    max-width: 60%;
+    max-height: 20%;
+    text-align: center;
+}
+
+.fade-in-div {
+    opacity: 0;
+    transition: opacity 1.5s ease; /* CSS transition for fade animation */
+}
+
+.fade-in-div-delay {
+    opacity: 0;
+    transition:  0.5s opacity 2.5s ease; /* CSS transition for fade animation */
+}
+
+.project_slider {
+    width: 90%;
+    /*max-width: 800px;*/
+    overflow: hidden;
+    position: relative;
+    padding: 30px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.project_slider_container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    /*border: 15px solid #dcd9d9;*/
+    background: #efefd1;
+    display: none;
+    transition: visibility 0.7s ease-in-out 0.7s;
+}
+
+.project_slider_top_p {
+    text-align: center;
+    background: black;
+    height: 50px;
+    color: gold;
+    padding: 30px 60px;
+    border-right: 15px solid whitesmoke;
+    border-left: 15px solid whitesmoke;
+    border-top: 15px solid whitesmoke;
+    border-bottom: unset;
+    border-radius: 100px 100px 0 0;
+    /*margin-bottom: -5px;*/
+    cursor: pointer;
+    z-index: 1;
+}
+
+.project_slider_top_p button {
+    background: unset;
+    border: unset;
+    color: gold;
+    font-weight: bolder;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.project_slider_bottom_p {
+    text-align: center;
+    background: black;
+    height: 50px;
+    color: gold;
+    padding: 30px 60px;
+    border-right: 15px solid whitesmoke;
+    border-left: 15px solid whitesmoke;
+    border-bottom: 15px solid whitesmoke;
+    border-top: 5px solid whitesmoke;
+    border-radius: 0 0 100px 100px;
+    /*margin-bottom: -5px;*/
+}
+
+.open_projects {
+    display: block ;
+}
+
+.go_down {
+    border-top: unset !important;
+}
+
+.project_slider img {
+    width: 70%;
+    margin: 0 auto;
+    height: 500px;
+    display: none;
+}
+
+.project_slider img.active {
+    display: block;
+}
+
+.github-footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    align-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*max-width: 800px;*/
+    margin: 0 auto !important;
+    width: 100%;
+}
+
+.profile-info img , .copy img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: fill;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.contact-info {
+
+}
+
+.contact-info-img img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: scale-down;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    align-items: center;
+    background: #4a96db;
+}
+
+.contact-info , .profile-info {
+    align-items: center;
+}
+
+/*.contact-info-img img {*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*    max-width: 200px;*/
+/*    margin: auto;*/
+
+/*}*/
+
+.profile-info h2,
+.profile-info p {
+    margin: 0;
+    color: white;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-info p {
+    margin: 0;
+    color: white;
+}
+
+.contact-info a {
+    color: #bbdefb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+.copy {
+    text-align: center;
+    /*margin-top: 30px;*/
+    font-size: 14px;
+    color: #999;
+    margin: 0 auto !important;
+    width: 100%;
+}
+
+/*footer {*/
+/*    background-color: #333;*/
+/*    color: #fff;*/
+/*    text-align: center;*/
+/*    padding: 1rem 0;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+
+/************************************************ contact *********************************************************/
+
+.instagram , .telegram , .github , .Gmail {
+    border-radius: 55px;
+    padding: 5px 8px;
+    background: #4a96db;
+    margin: 40px auto;
+    width: 700px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center !important;
+}
+
+.contact_img {
+    width: 100px;
+    height: 100%;
+    margin: auto 0 !important;
+}
+
+.contact_p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+    margin: 0 auto;
+    color: whitesmoke;
+}
+
+.contact_p a {
+    text-decoration: none !important;
+    color: whitesmoke;
+}
